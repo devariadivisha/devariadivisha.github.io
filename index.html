@@ -484,7 +484,7 @@ hr.div { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
     <div class="sb-links">
       <a href="https://www.linkedin.com/in/divisha-devaria" class="sb-link" target="_blank">LinkedIn</a>
       <a href="mailto:devaria.divisha.21@gmail.com" class="sb-link">Email</a>
-      <a href="#" class="sb-link">CV ↓</a>
+      <a href="https://www.linkedin.com/in/divisha-devaria" class="sb-link" target="_blank">CV ↓</a>
     </div>
   </div>
 </nav>
@@ -530,11 +530,11 @@ hr.div { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
 
   <hr class="div">
   <div style="display:flex;gap:8px;flex-wrap:wrap;">
-    <button class="btn" onclick="nav('experience',document.querySelector('[onclick*=experience]'))">→ Experience</button>
-    <button class="btn" onclick="nav('projects',document.querySelector('[onclick*=projects]'))">→ Projects</button>
-    <button class="btn" onclick="nav('iitk',document.querySelector('[onclick*=iitk]'))">→ IIT Kanpur</button>
-    <button class="btn" onclick="nav('blog',document.querySelector('[onclick*=blog]'))">→ Blog</button>
-    <a href="#" class="btn btn-p">Download CV</a>
+    <button class="btn" onclick="nav('experience', document.querySelectorAll('.nav-btn')[1])">→ Experience</button>
+    <button class="btn" onclick="nav('projects', document.querySelectorAll('.nav-btn')[2])">→ Projects</button>
+    <button class="btn" onclick="nav('iitk', document.querySelectorAll('.nav-btn')[4])">→ IIT Kanpur</button>
+    <button class="btn" onclick="nav('blog', document.querySelectorAll('.nav-btn')[7])">→ Blog</button>
+    <a href="https://www.linkedin.com/in/divisha-devaria" target="_blank" class="btn btn-p">View CV on LinkedIn ↗</a>
   </div>
 </div>
 </div>
@@ -552,6 +552,53 @@ hr.div { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
     <div class="ach-card"><span class="ach-num">1.2% → 14.1%</span><span class="ach-label">Bid-hit ratio improvement through process and strategy redesign</span></div>
     <div class="ach-card"><span class="ach-num">5x</span><span class="ach-label">Pipeline efficiency gain — USD 4.9B/year → USD 2.9B with 3× higher win rate</span></div>
     <div class="ach-card"><span class="ach-num">~40%</span><span class="ach-label">Reduction in bid submission turnaround via standardised estimation tool</span></div>
+  </div>
+
+  <!-- Visual: Pipeline transformation -->
+  <div style="background:var(--bg2);border-radius:12px;padding:20px 24px;margin:20px 0;">
+    <div style="font-size:11px;font-family:var(--mono);color:var(--text3);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:16px;">Bid strategy transformation · 2021 → 2025</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+      <div>
+        <div style="font-size:11px;color:var(--text3);font-family:var(--mono);margin-bottom:8px;">Before — High volume, low return</div>
+        <div style="margin-bottom:6px;">
+          <div style="font-size:12px;color:var(--text2);margin-bottom:3px;">Pipeline bid</div>
+          <div style="background:var(--border);border-radius:4px;height:20px;width:100%;position:relative;">
+            <div style="background:#c8c3b8;border-radius:4px;height:20px;width:100%;display:flex;align-items:center;padding:0 8px;">
+              <span style="font-size:11px;font-family:var(--mono);color:var(--text2);">USD 4.9B</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div style="font-size:12px;color:var(--text2);margin-bottom:3px;">Annual wins</div>
+          <div style="background:var(--border);border-radius:4px;height:20px;width:100%;position:relative;">
+            <div style="background:#e8a87c;border-radius:4px;height:20px;width:12%;display:flex;align-items:center;padding:0 8px;min-width:64px;">
+              <span style="font-size:11px;font-family:var(--mono);color:var(--amber);">USD 57M</span>
+            </div>
+          </div>
+        </div>
+        <div style="font-size:11px;color:var(--text3);margin-top:8px;font-family:var(--mono);">Bid-hit ratio: 1.2%</div>
+      </div>
+      <div>
+        <div style="font-size:11px;color:var(--accent);font-family:var(--mono);margin-bottom:8px;">After — Leaner, value-focused</div>
+        <div style="margin-bottom:6px;">
+          <div style="font-size:12px;color:var(--text2);margin-bottom:3px;">Pipeline bid</div>
+          <div style="background:var(--border);border-radius:4px;height:20px;width:100%;position:relative;">
+            <div style="background:var(--accent-bg);border:1px solid var(--accent);border-radius:4px;height:20px;width:59%;display:flex;align-items:center;padding:0 8px;">
+              <span style="font-size:11px;font-family:var(--mono);color:var(--accent);">USD 2.9B</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div style="font-size:12px;color:var(--text2);margin-bottom:3px;">Annual wins</div>
+          <div style="background:var(--border);border-radius:4px;height:20px;width:100%;position:relative;">
+            <div style="background:var(--accent);border-radius:4px;height:20px;width:100%;display:flex;align-items:center;padding:0 8px;">
+              <span style="font-size:11px;font-family:var(--mono);color:white;">USD 180M</span>
+            </div>
+          </div>
+        </div>
+        <div style="font-size:11px;color:var(--accent);margin-top:8px;font-family:var(--mono);">Bid-hit ratio: 14.1% · 5x efficiency ↑</div>
+      </div>
+    </div>
   </div>
 
   <hr class="div">
@@ -1025,30 +1072,30 @@ hr.div { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
 
   <div class="blog-item">
     <div class="blog-date">Published · 2023</div>
-    <div class="blog-title">What is TCFD & Why Businesses Should Care?</div>
-    <p class="blog-ex">My first public piece, written after completing the TCFD Climate Disclosure certification. Explains the Task Force on Climate-related Financial Disclosures framework for a non-specialist audience — why it was created, what it asks of companies, and why infrastructure-heavy businesses are especially exposed. Still the most relevant piece I've written for UAE readers given the post-COP28 regulatory environment.</p>
+    <div class="blog-title" onclick="openPost('tcfd')">What is TCFD & Why Businesses Should Care? →</div>
+    <p class="blog-ex">My first public piece, written after completing the TCFD Climate Disclosure certification. Explains the Task Force on Climate-related Financial Disclosures framework for a non-specialist audience — why it was created, what it asks of companies, and why infrastructure-heavy businesses are especially exposed.</p>
     <div class="blog-foot">
-      <span class="tag g">Published</span>
+      <span class="tag g">Published · Read now</span>
       <span class="tag a">Climate Finance</span>
       <span class="blog-rt">~5 min read</span>
     </div>
   </div>
 
   <div class="blog-item">
-    <div class="blog-date">Draft ready</div>
-    <div class="blog-title">What India's HAM Model Teaches Us About Infrastructure Financing Risk</div>
-    <p class="blog-ex">Hybrid Annuity Model contracts changed how India finances national highways — shifting revenue risk to government while keeping execution risk with the contractor. After managing bids across HAM, EPC, and Item Rate contracts for five years, I want to explain what that actually looks like from the inside: where the financial stress points are, why the bid-hit ratio differs across modes, and what it means for investors comparing GCC and South Asian infrastructure assets.</p>
+    <div class="blog-date">Coming soon</div>
+    <div class="blog-title" style="cursor:default;opacity:0.6;">What India's HAM Model Teaches Us About Infrastructure Financing Risk</div>
+    <p class="blog-ex">Hybrid Annuity Model contracts changed how India finances national highways — shifting revenue risk to government while keeping execution risk with the contractor. After managing bids across HAM, EPC, and Item Rate contracts for five years, I'll explain what that actually looks like from the inside.</p>
     <div class="blog-foot">
-      <span class="tag amber">In Progress</span>
+      <span class="tag">In Progress</span>
       <span class="tag b">Infrastructure Finance</span>
       <span class="blog-rt">~8 min read</span>
     </div>
   </div>
 
   <div class="blog-item">
-    <div class="blog-date">Planned</div>
-    <div class="blog-title">I Used ML to Predict Competitive Bid Prices — Here's What the Data Said</div>
-    <p class="blog-ex">A plain-language write-up of my IIT Kanpur capstone project: using Ridge Regression on 120 real infrastructure bids to predict the awarded bid percentage. What features matter most? Why terrain and contract mode are stronger predictors than project size? What a 17.4% average bid-below-authority-cost means strategically? This post has the potential to be widely shared among infrastructure professionals.</p>
+    <div class="blog-date">Coming soon</div>
+    <div class="blog-title" style="cursor:default;opacity:0.6;">I Used ML to Predict Competitive Bid Prices — Here's What the Data Said</div>
+    <p class="blog-ex">A plain-language write-up of my IIT Kanpur capstone project: using Ridge Regression on 120 real infrastructure bids to predict the awarded bid percentage. What features matter most, and what a 17.4% average bid-below-authority-cost means strategically.</p>
     <div class="blog-foot">
       <span class="tag">Planned</span>
       <span class="tag g">ML · Infrastructure</span>
@@ -1056,10 +1103,10 @@ hr.div { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
     </div>
   </div>
 
-  <div class="blog-item" style="opacity:0.5;">
+  <div class="blog-item" style="opacity:0.45;">
     <div class="blog-date">Planned</div>
-    <div class="blog-title">Why Bid-Hit Ratios in Infrastructure Are Structurally Broken — and How Data Can Fix Them</div>
-    <p class="blog-ex">Before process redesign at Ravi Infrabuild, bid-hit ratio was 1.2%. After strategy and tooling changes, it reached 14.1%. This post examines why most medium-sized contractors overbid (low selectivity, poor estimation discipline, no feedback loops) and what a data-informed bid strategy actually looks like in practice.</p>
+    <div class="blog-title" style="cursor:default;">Why Bid-Hit Ratios in Infrastructure Are Structurally Broken — and How Data Can Fix Them</div>
+    <p class="blog-ex">Before process redesign at Ravi Infrabuild, bid-hit ratio was 1.2%. After strategy and tooling changes, it reached 14.1%. This post examines why most medium-sized contractors overbid and what a data-informed bid strategy looks like in practice.</p>
     <div class="blog-foot">
       <span class="tag">Planned</span>
       <span class="tag a">Strategy</span>
@@ -1069,9 +1116,61 @@ hr.div { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
 </div>
 </div>
 
+<!-- ══ BLOG POST: TCFD ══ -->
+<div id="page-tcfd" class="page">
+<div class="pi">
+  <button class="btn" onclick="nav('blog', document.querySelector('[onclick*=blog]'))" style="margin-bottom:28px;">← Back to Blog</button>
+  <span class="pg-label">Essay · Climate Finance</span>
+  <h1 class="pg-title">What is TCFD & Why Businesses Should Care?</h1>
+  <p class="pg-sub">Published 2023 · 5 min read · Climate Disclosure Series</p>
+
+  <p>In 2015, the Financial Stability Board — a body of global regulators and central bankers — noticed something troubling. Companies were carrying enormous financial exposure to climate-related risks, and almost none of them were disclosing it. Investors couldn't price it. Lenders couldn't model it. And regulators couldn't act on what they couldn't see.</p>
+
+  <p>Their response was to create the Task Force on Climate-related Financial Disclosures, or TCFD. Former New York Mayor Michael Bloomberg chaired it. Mark Carney, then Governor of the Bank of England, was the driving force behind it. The mandate was simple: develop a framework that companies could use to disclose climate-related financial risks in a consistent, comparable, and decision-useful way.</p>
+
+  <p>The framework they produced, published in 2017, is built around four pillars: <strong>Governance</strong> (who in your organisation oversees climate risk?), <strong>Strategy</strong> (how does climate risk affect your business model — today and under different future scenarios?), <strong>Risk Management</strong> (how do you identify, assess, and manage climate risks?), and <strong>Metrics & Targets</strong> (what are you measuring, and what are you aiming for?).</p>
+
+  <h2>Why this matters more than most ESG reporting</h2>
+
+  <p>There are dozens of ESG frameworks. What makes TCFD different — and why it has become the closest thing to a global standard — is that it is explicitly financial. It doesn't ask companies to be virtuous. It asks them to be transparent about risks that are material to their balance sheet.</p>
+
+  <p>TCFD distinguishes between two types of climate risk that most people conflate. Physical risks are the direct effects of a changing climate — floods damaging assets, heat reducing worker productivity, droughts disrupting supply chains. Transition risks are the financial consequences of the global economy shifting away from carbon — new regulations, stranded fossil fuel assets, shifting consumer demand, and the cost of retrofitting infrastructure to meet new standards.</p>
+
+  <p>For infrastructure businesses, both categories are immediately relevant. A highway project in a flood-prone region carries measurable physical risk that should appear in a concession agreement's risk matrix. A building portfolio that doesn't meet 2030 energy standards carries transition risk that affects asset valuation today.</p>
+
+  <h2>The scenario analysis requirement</h2>
+
+  <p>The most demanding — and most valuable — part of TCFD is the requirement for scenario analysis. Companies are asked to assess their strategy not just under current conditions, but under at least two climate scenarios: one aligned with a 2°C warming pathway, and one more severe. This is not a prediction exercise. It is a stress test. The point is to understand how resilient your business model is under conditions that are plausible but not certain.</p>
+
+  <p>This is where TCFD separates genuine climate strategy from checkbox compliance. A company that can articulate clearly how its asset base, revenue model, and supply chain hold up under a 2°C scenario — and what it would need to change under a more severe one — has done serious work. A company that fills in a TCFD template without changing how it makes decisions has not.</p>
+
+  <h2>Where we are now</h2>
+
+  <p>As of 2023, TCFD-aligned disclosure is mandatory or strongly expected in the UK, EU, New Zealand, Japan, Singapore, and increasingly in the UAE under the Securities and Commodities Authority's sustainability reporting guidelines. The question for most companies is no longer whether to disclose — it is how to disclose well.</p>
+
+  <p>For businesses in the Gulf, particularly infrastructure developers and asset owners with long-horizon projects, the urgency is compounded by geography. The UAE's infrastructure is being built for a 50-year horizon in a region where temperatures already exceed safe working thresholds for parts of the year, where water scarcity is structural, and where a global energy transition will materially affect trade flows and government revenues. TCFD is not an external imposition — it is a framework for making better long-term decisions in precisely this environment.</p>
+
+  <div class="callout" style="margin-top:28px;">
+    I wrote this after completing the TCFD Climate Disclosure Series certification in 2023. It was my first piece of public writing on infrastructure and sustainability — and the starting point for a longer interest in how climate risk is priced into infrastructure assets in the Gulf.
+  </div>
+
+  <div style="margin-top:28px;">
+    <button class="btn" onclick="nav('blog', document.querySelector('[onclick*=blog]'))">← Back to Blog</button>
+  </div>
+</div>
+</div>
+
 </main>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+function openPost(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  document.querySelector('[onclick*=blog]').classList.add('active');
+  window.scrollTo(0, 0);
+}
+
 function nav(id, btn) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
@@ -1088,10 +1187,4 @@ function toggleSidebar() {
 document.addEventListener('click', function(e) {
   if (window.innerWidth <= 768) {
     const sb = document.getElementById('sidebar');
-    const btn = document.querySelector('.menu-btn');
-    if (!sb.contains(e.target) && !btn.contains(e.target)) sb.classList.remove('open');
-  }
-});
-</script>
-</body>
-</html>
+    const btn = 
