@@ -142,7 +142,7 @@ p{color:var(--text2);margin-bottom:12px;font-size:14.5px;line-height:1.75}
     <div class="avt">DD</div>
     <div>
       <p>I work at the intersection of <strong>infrastructure strategy</strong>, <strong>data science</strong>, and <strong>sustainable development</strong>. Five years leading bid strategy and digital transformation at a major Indian EPC firm &mdash; across highways, railways, airports, and ropeways &mdash; while completing an e-Masters in Data Science &amp; Business Analytics from IIT Kanpur with a 9.08 CPI.</p>
-      <p>My capstone project used machine learning on a USD 6.5 billion infrastructure bid pipeline. My goal is to bring analytical rigour to infrastructure decision-making &mdash; from bid strategy to ESG performance.</p>
+      <p>My capstone project used machine learning on a USD 6.5 billion infrastructure bid pipeline. I have since extended it into a full production tool &mdash; the <strong>Strategic Bid Intelligence Tool</strong> &mdash; a Go/No-Go decision engine trained on 204 real awarded projects, with PDF parsing, market intelligence, and win probability modules built in Python and Streamlit.</p>
     </div>
   </div>
   <div class="sr">
@@ -154,7 +154,11 @@ p{color:var(--text2);margin-bottom:12px;font-size:14.5px;line-height:1.75}
   <h2>What connects it all</h2>
   <p>A summer school in the Netherlands during my bachelor&apos;s &mdash; studying Randstad&apos;s sustainable urbanism &mdash; reoriented how I saw infrastructure. I came back to India building roads for motors while they were designing cities for people. That gap has driven everything since: the edX courses on circular economy and inclusive cities, the TCFD certification, the IIT Kanpur degree, and the capstone project applying ML to infrastructure bid data.</p>
   <div class="cl">The question I keep returning to: <em>how do we make infrastructure decisions &mdash; about what to build, where, and at what cost &mdash; more rigorous, more data-driven, and more aligned with long-term sustainability?</em></div>
-  <div class="cl bl">Currently based in <strong>Abu Dhabi, UAE</strong>. Open to roles in infrastructure strategy, proposals/BD, data analytics, and ESG-linked infrastructure advisory.</div>
+  <div class="cl bl">Currently based in <strong>Abu Dhabi, UAE</strong>. Open to roles in infrastructure strategy, proposals/BD, data analytics, and ESG-linked infrastructure advisory. Also open to PhD and Masters programmes in infrastructure analytics, sustainable urbanism, or built environment data science &mdash; with preference for UAE-based institutions and shortlisted international programmes.</div>
+  <hr class="div">
+  <h2>Research interests</h2>
+  <p>My work keeps returning to one underlying question: how do the decisions that shape infrastructure &mdash; what to build, where, at what cost, and for whom &mdash; get made, and how could they be made better? My bachelor&apos;s thesis examined why PPP highway contracts fail financially in India. My IIT Kanpur capstone used ML to predict competitive bid outcomes. The tool I built extends that into a decision-support system that is now being used on live bids.</p>
+  <p>The research questions I would want to pursue further sit at three intersections: <strong>infrastructure procurement and financial risk</strong> (why do cost and time overruns persist despite decades of research?), <strong>data-driven decision-making in capital-intensive environments</strong> (how do we build tools that practitioners actually trust and use?), and <strong>sustainable infrastructure finance</strong> (how does climate risk get priced into long-horizon infrastructure assets, particularly in the GCC?).</p>
   <hr class="div">
   <div style="display:flex;gap:8px;flex-wrap:wrap;">
     <button class="btn" onclick="go('experience')">&#8594; Experience</button>
@@ -215,13 +219,55 @@ p{color:var(--text2);margin-bottom:12px;font-size:14.5px;line-height:1.75}
   <span class="pgl">Work</span>
   <h1 class="pgt">Projects &amp; Work Samples</h1>
   <p class="pgs">Academic projects, professional work, and research.</p>
+  <h2>Featured — Bid Intelligence Tool</h2>
+  <div class="pc" style="border-color:var(--accent);background:var(--accent-bg);">
+    <div class="ph">
+      <span class="pt" style="color:var(--accent);">Strategic Bid Intelligence Tool &mdash; v6</span>
+      <span class="bd bdg">Built &middot; Python &middot; Streamlit</span>
+    </div>
+    <div class="pm">Extended from IIT Kanpur Capstone &middot; 2025 &middot; RIPL Internal</div>
+    <p class="pd">A production-ready Go/No-Go decision engine built on RIPL&apos;s own historical bid data. The tool automates what previously required days of manual work &mdash; from document extraction to market benchmarking to final verdict &mdash; in a single session.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0;">
+      <div style="background:var(--bg);border-radius:8px;padding:12px 14px;">
+        <div style="font-size:10px;font-family:var(--mono);color:var(--text3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px;">What it does</div>
+        <p style="font-size:13px;margin-bottom:0;color:var(--text2);">Upload a tender PDF (NIT, Schedule B, or RFP). The tool auto-extracts 19+ fields, runs a Ridge Regression model trained on 204 awarded projects, calculates your cost position against market floor and ceiling, scores 5 strategic dimensions, and returns a deterministic <strong>GO / CONDITIONAL GO / NO-GO</strong> verdict with full reasoning.</p>
+      </div>
+      <div style="background:var(--bg);border-radius:8px;padding:12px 14px;">
+        <div style="font-size:10px;font-family:var(--mono);color:var(--text3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px;">What it knows</div>
+        <p style="font-size:13px;margin-bottom:0;color:var(--text2);">204 awarded projects across 5 sectors. Model R&sup2;: Highway 0.818, Railway 0.962. Covers sector competitiveness, state-wise bidding aggressiveness, year-on-year market trends, and RIPL&apos;s own win rate by segment (e.g. Ropeway HAM: 50% win rate, Highway EPC: 6%).</p>
+      </div>
+    </div>
+    <div style="background:var(--bg);border-radius:8px;padding:12px 14px;margin-bottom:14px;">
+      <div style="font-size:10px;font-family:var(--mono);color:var(--text3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">Architecture &mdash; 6 modules</div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;font-size:12px;font-family:var(--mono);color:var(--text2);">
+        <span style="background:var(--bg2);padding:3px 8px;border-radius:4px;">pdf_parser.py</span>
+        <span style="background:var(--bg2);padding:3px 8px;border-radius:4px;">model_engine.py</span>
+        <span style="background:var(--bg2);padding:3px 8px;border-radius:4px;">trend_engine.py</span>
+        <span style="background:var(--bg2);padding:3px 8px;border-radius:4px;">intelligence_engine.py</span>
+        <span style="background:var(--bg2);padding:3px 8px;border-radius:4px;">recommendation_engine.py</span>
+        <span style="background:var(--bg2);padding:3px 8px;border-radius:4px;">report_engine.py</span>
+      </div>
+    </div>
+    <div style="background:var(--bg);border-radius:8px;padding:12px 14px;margin-bottom:14px;">
+      <div style="font-size:10px;font-family:var(--mono);color:var(--text3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">Sample output &mdash; real data</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;font-size:12px;text-align:center;">
+        <div style="background:var(--accent-bg);border-radius:6px;padding:8px;"><div style="font-family:var(--serif);font-size:18px;color:var(--accent);font-weight:500;">-20.9%</div><div style="color:var(--text3);font-size:10px;font-family:var(--mono);">Highway mean bid<br>vs authority cost</div></div>
+        <div style="background:var(--amber-bg);border-radius:6px;padding:8px;"><div style="font-family:var(--serif);font-size:18px;color:var(--amber);font-weight:500;">+41.8%</div><div style="color:var(--text3);font-size:10px;font-family:var(--mono);">Ropeway HAM mean<br>premium (bids above)</div></div>
+        <div style="background:var(--blue-bg);border-radius:6px;padding:8px;"><div style="font-family:var(--serif);font-size:18px;color:var(--blue);font-weight:500;">204</div><div style="color:var(--text3);font-size:10px;font-family:var(--mono);">Awarded projects<br>in training dataset</div></div>
+      </div>
+    </div>
+    <div class="cl" style="margin-bottom:0;font-size:13px;">Built as an internal tool for RIPL&apos;s bid management team. Currently running on localhost; deployment pending management approval for institutionalisation. The tool&apos;s business case projects win rate improvement from 11.7% to 20%+, freeing an estimated &#8377;150&ndash;200 Cr in bid security capital over 3 years.</div>
+    <div style="margin-top:12px;">
+      <span class="tag g">Python</span><span class="tag g">Streamlit</span><span class="tag g">Ridge Regression</span><span class="tag b">PDF Parsing</span><span class="tag b">Market Intelligence</span><span class="tag">Infrastructure Bidding</span><span class="tag a">Decision Support</span>
+    </div>
+  </div>
+
   <h2>Academic &mdash; IIT Kanpur</h2>
   <div class="pc">
     <div class="ph"><span class="pt">Predicting Competitive Bid Price for Infrastructure Projects</span><span class="bd bdg">Grade: A &middot; Capstone</span></div>
-    <div class="pm">MBA 944 &middot; Supervised by Dr. Veena Bansal &middot; IIT Kanpur, 2024</div>
-    <p class="pd">Built a machine learning model to predict the awarded bid percentage for infrastructure projects, enabling data-driven Go/No-Go decisions. Used live bidding data &mdash; 120 projects (2020&ndash;2024) across highways, railways, and structures. Ridge Regression achieved test R&sup2; = 0.677. Average awarded bid was 17.4% below authority cost.</p>
+    <div class="pm">MBA 944 &middot; Supervised by Dr. Veena Bansal &middot; IIT Kanpur, 2024 &middot; Foundation for the Bid Intelligence Tool above</div>
+    <p class="pd">Built a machine learning model to predict the awarded bid percentage for infrastructure projects, enabling data-driven Go/No-Go decisions. Used live bidding data &mdash; 120 projects (2020&ndash;2024) across highways, railways, and structures. Ridge Regression achieved test R&sup2; = 0.677. Average awarded bid was 17.4% below authority cost. This capstone became the core prediction engine of the Bid Intelligence Tool, subsequently extended with PDF parsing, market intelligence, win probability, and a full Streamlit interface.</p>
     <div><span class="tag g">Python</span><span class="tag g">Ridge Regression</span><span class="tag g">KNN</span><span class="tag b">Feature Engineering</span><span class="tag">Infrastructure Bidding</span><span class="tag a">Live Industry Data</span></div>
-    <div class="cl" style="margin-top:12px;margin-bottom:0;font-size:13px;">Dataset came from live bids &mdash; not a public dataset. Bridges infrastructure domain knowledge with applied ML.</div>
   </div>
   <div class="pc">
     <div class="ph"><span class="pt">Causal Impact of Rural Roads on Local Economic Development</span><span class="bd bdb">Grade: B+</span></div>
@@ -340,9 +386,26 @@ p{color:var(--text2);margin-bottom:12px;font-size:14.5px;line-height:1.75}
   <div class="cg">
     <div class="cc"><div class="cn">Climate Disclosure Series</div><div class="cm">TCFD Hub &middot; 2023</div><div style="font-size:12px;color:var(--text2);margin-bottom:7px;">Task Force on Climate-related Financial Disclosures framework. Led to published blog post on TCFD.</div><span class="tag g">Certified</span></div>
   </div>
-  <h2>International exposure</h2>
+  <h2>International exposure &mdash; Summer Schools</h2>
   <div class="cg">
-    <div class="cc"><div class="cn">International Summer School &mdash; Randstad, Netherlands</div><div class="cm">CEPT University &middot; 2018</div><div style="font-size:12px;color:var(--text2);margin-bottom:7px;">7-day study of sustainable development in Dutch cities. Water-sensitive design, bike-oriented urbanism. The experience that reoriented how I see infrastructure.</div><span class="tag b">Study Abroad</span></div>
+    <div class="cc">
+      <div class="cn">Sustainable &amp; Smart Urban Growth &mdash; Randstad, Netherlands</div>
+      <div class="cm">CEPT University &middot; S18FP009 &middot; 2018</div>
+      <div style="font-size:12px;color:var(--text2);margin-bottom:7px;">Week-long immersion in the Randstad megapolis (Amsterdam, Rotterdam, The Hague, Utrecht). Themes: sustainable living environments, intra-urban mobility, flood management, climate-neutral housing, and infrastructure in urban development. The experience that fundamentally shifted how I see infrastructure &mdash; from motor-oriented to people-oriented design.</div>
+      <span class="tag b">Study Abroad &middot; Netherlands</span>
+    </div>
+    <div class="cc">
+      <div class="cn">Disruptive Innovations in the Built Environment &mdash; London</div>
+      <div class="cm">CEPT University &middot; S17FM001 &middot; 2017</div>
+      <div style="font-size:12px;color:var(--text2);margin-bottom:7px;">Site visits to ongoing construction projects, occupied buildings&apos; facilities management departments, and meetings with experts and academics in London. Explored transformations in professional practice, building technology, project and facilities management, and the impact of disruptive innovation on urban spaces. First international exposure &mdash; a stepping stone toward working at a global level.</div>
+      <span class="tag b">Study Abroad &middot; London</span>
+    </div>
+    <div class="cc">
+      <div class="cn">City Management Practices</div>
+      <div class="cm">CEPT University &middot; W15FM007 &middot; 2015</div>
+      <div style="font-size:12px;color:var(--text2);margin-bottom:7px;">Study of public-private partnerships for city management across Lavasa, Palava, GIFT City, and Thane. Covered federalism, local private service overlay schemes, and the structuring of Smart City frameworks. Early exposure to PPP models that later became the subject of the bachelor&apos;s thesis.</div>
+      <span class="tag a">Winter School &middot; India</span>
+    </div>
   </div>
 </div></div>
 
@@ -350,13 +413,22 @@ p{color:var(--text2);margin-bottom:12px;font-size:14.5px;line-height:1.75}
   <span class="pgl">Education</span>
   <h1 class="pgt">Bachelor&apos;s &middot; CEPT University</h1>
   <p class="pgs">B.Tech in Construction Technology &middot; Ahmedabad &middot; 2015&ndash;2019</p>
-  <div class="cl am">CEPT University is one of India&apos;s foremost institutions for built environment education. Construction Technology combines structural, geotechnical, and project management foundations with urban design electives.</div>
+  <div class="cl am">CEPT University is one of India&apos;s foremost institutions for built environment education. Construction Technology combines structural, geotechnical, and project management foundations with urban design electives. The degree is housed in the Faculty of Technology.</div>
   <div class="tl">
     <div class="ti">
       <div class="td">2015 &ndash; 2019</div>
       <div class="tt">B.Tech, Construction Technology</div>
-      <div class="ts">CEPT University, Ahmedabad</div>
-      <p>Core training in structural engineering, construction management, quantity surveying, and project execution. Urban planning electives introduced sustainable development frameworks. Editorial team, FT Newsletter &apos;Edifice&apos;.</p>
+      <div class="ts">CEPT University, Ahmedabad &middot; Faculty of Technology</div>
+      <p>Core training in structural engineering, construction management, quantity surveying, highway engineering, and project execution. Deliberately pursued electives in urban geography, GIS, renewable energy, contract management and PPP, and programming with Excel and R Studio &mdash; building a foundation in spatial data and quantitative methods before data science became a stated goal. Editorial team, FT Newsletter &lsquo;Edifice&rsquo;.</p>
+      <div style="margin-top:10px;">
+        <span class="tag">Highway Engineering &amp; Pavement Design</span>
+        <span class="tag">Quantity Surveying &amp; Rate Analysis</span>
+        <span class="tag">Contract Management &amp; PPP</span>
+        <span class="tag b">Introduction to GIS (ArcGIS)</span>
+        <span class="tag b">Programming with Excel &amp; R Studio</span>
+        <span class="tag a">Urban Geography &amp; Socio-spatial Processes</span>
+        <span class="tag a">Renewable Energy Technologies</span>
+      </div>
     </div>
   </div>
   <hr class="div">
@@ -369,8 +441,13 @@ p{color:var(--text2);margin-bottom:12px;font-size:14.5px;line-height:1.75}
   </div>
   <hr class="div">
   <h2>Notable</h2>
-  <p>An urban planning elective and the Netherlands summer school fundamentally shifted my perspective on infrastructure. This became the connecting thread for everything that followed.</p>
-  <div style="margin-top:10px;"><span class="tag">FT Newsletter &apos;Edifice&apos; &mdash; Editorial team</span><span class="tag">National-level chess player</span><span class="tag b">Netherlands Summer School, 2018</span></div>
+  <p>Two international summer schools during the degree &mdash; London (2017) on disruptive innovation in the built environment, and the Netherlands (2018) on sustainable and smart urban growth in the Randstad &mdash; reoriented how I think about infrastructure. I was learning to build for motor traffic; they were designing for bikes, people, and water. That gap became the connecting thread for everything that followed.</p>
+  <div style="margin-top:10px;">
+    <span class="tag b">London Summer School, 2017</span>
+    <span class="tag b">Netherlands Summer School, 2018</span>
+    <span class="tag">FT Newsletter &lsquo;Edifice&rsquo; &mdash; Editorial team</span>
+    <span class="tag">National-level chess player</span>
+  </div>
 </div></div>
 
 <div id="page-blog" class="page"><div class="pi">
@@ -379,10 +456,10 @@ p{color:var(--text2);margin-bottom:12px;font-size:14.5px;line-height:1.75}
   <p class="pgs">Writing to think out loud &mdash; specific, honest, based on things I&apos;ve actually done or studied.</p>
   <div class="cl bl">One well-argued post every few weeks. The goal is depth over frequency.</div>
   <div class="bi">
-    <div class="bd2">Published &middot; 2023</div>
-    <div class="bt" onclick="go('tcfd')">What is TCFD &amp; Why Businesses Should Care? &rarr;</div>
-    <p class="bx">My first public piece, written after completing the TCFD Climate Disclosure certification. Explains the framework for a non-specialist audience &mdash; why it was created, what it asks of companies, and why infrastructure-heavy businesses are especially exposed.</p>
-    <div class="bf"><span class="tag g">Published &middot; Read now</span><span class="tag a">Climate Finance</span><span class="br">~5 min read</span></div>
+    <div class="bd2">Published &middot; 2023 &middot; 12 pages</div>
+    <a href="https://sheer-horn-32e.notion.site/What-is-TCFD-and-Why-Businesses-Should-Care-d1fee8fd542e48f5885bbba84e2568db" target="_blank" style="text-decoration:none;"><div class="bt">What is TCFD and Why Businesses Should Care? &rarr;</div></a>
+    <p class="bx">A researched article covering the full TCFD framework &mdash; climate science context, the four pillars (Governance, Strategy, Risk Management, Metrics &amp; Targets), physical vs transition risk taxonomy, scenario analysis requirements, global regulatory adoption, and the business case for voluntary early disclosure. Written after completing the TCFD Climate Disclosure Series certification. Published on Notion.</p>
+    <div class="bf"><span class="tag g">Published &middot; Read on Notion &nearr;</span><span class="tag a">Climate Finance</span><span class="tag b">TCFD</span><span class="br">~15 min read</span></div>
   </div>
   <div class="bi">
     <div class="bd2">Coming soon</div>
@@ -404,31 +481,9 @@ p{color:var(--text2);margin-bottom:12px;font-size:14.5px;line-height:1.75}
   </div>
 </div></div>
 
-<div id="page-tcfd" class="page"><div class="pi">
-  <button class="btn" onclick="go('blog')" style="margin-bottom:28px;">&#8592; Back to Blog</button>
-  <span class="pgl">Essay &middot; Climate Finance</span>
-  <h1 class="pgt">What is TCFD &amp; Why Businesses Should Care?</h1>
-  <p class="pgs">Published 2023 &middot; 5 min read &middot; Climate Disclosure Series</p>
-  <p>In 2015, the Financial Stability Board noticed something troubling. Companies were carrying enormous financial exposure to climate-related risks, and almost none of them were disclosing it. Investors couldn&apos;t price it. Lenders couldn&apos;t model it. Regulators couldn&apos;t act on what they couldn&apos;t see.</p>
-  <p>Their response was to create the Task Force on Climate-related Financial Disclosures &mdash; TCFD. Former New York Mayor Michael Bloomberg chaired it. The mandate was simple: develop a framework that companies could use to disclose climate-related financial risks in a consistent, comparable, and decision-useful way.</p>
-  <p>The framework, published in 2017, is built around four pillars: <strong>Governance</strong> (who oversees climate risk?), <strong>Strategy</strong> (how does climate risk affect your business model under different scenarios?), <strong>Risk Management</strong> (how do you identify and manage climate risks?), and <strong>Metrics &amp; Targets</strong> (what are you measuring and aiming for?).</p>
-  <h2>Why this matters more than most ESG reporting</h2>
-  <p>There are dozens of ESG frameworks. What makes TCFD different is that it is explicitly financial. It doesn&apos;t ask companies to be virtuous. It asks them to be transparent about risks that are material to their balance sheet.</p>
-  <p>TCFD distinguishes between two types of climate risk. Physical risks are the direct effects of a changing climate &mdash; floods damaging assets, heat reducing worker productivity, droughts disrupting supply chains. Transition risks are the financial consequences of the economy shifting away from carbon &mdash; new regulations, stranded assets, and the cost of retrofitting infrastructure to meet new standards.</p>
-  <p>For infrastructure businesses, both categories are immediately relevant. A highway project in a flood-prone region carries measurable physical risk. A building portfolio that doesn&apos;t meet 2030 energy standards carries transition risk that affects asset valuation today.</p>
-  <h2>The scenario analysis requirement</h2>
-  <p>The most demanding part of TCFD is the requirement for scenario analysis. Companies are asked to assess their strategy under at least two climate scenarios: one aligned with a 2&deg;C warming pathway, and one more severe. This is not a prediction exercise &mdash; it is a stress test. The point is to understand how resilient your business model is under conditions that are plausible but not certain.</p>
-  <p>A company that can articulate clearly how its asset base and revenue model hold up under a 2&deg;C scenario has done serious work. A company that fills in a TCFD template without changing how it makes decisions has not.</p>
-  <h2>Where we are now</h2>
-  <p>As of 2023, TCFD-aligned disclosure is mandatory or strongly expected in the UK, EU, New Zealand, Japan, Singapore, and increasingly in the UAE under the Securities and Commodities Authority&apos;s sustainability reporting guidelines.</p>
-  <p>For businesses in the Gulf, the urgency is compounded by geography. The UAE&apos;s infrastructure is being built for a 50-year horizon in a region where temperatures already exceed safe working thresholds for parts of the year, water scarcity is structural, and a global energy transition will materially affect trade flows and government revenues. TCFD is not an external imposition &mdash; it is a framework for making better long-term decisions in precisely this environment.</p>
-  <div class="cl" style="margin-top:28px;">Written after completing the TCFD Climate Disclosure Series certification in 2023. My first piece of public writing on infrastructure and sustainability.</div>
-  <div style="margin-top:28px;"><button class="btn" onclick="go('blog')">&#8592; Back to Blog</button></div>
-</div></div>
-
 </main>
 <script>
-var pages=['about','experience','projects','skills','iitk','courses','bachelors','blog','tcfd'];
+var pages=['about','experience','projects','skills','iitk','courses','bachelors','blog'];
 function go(id){
   for(var i=0;i<pages.length;i++){
     var p=document.getElementById('page-'+pages[i]);
